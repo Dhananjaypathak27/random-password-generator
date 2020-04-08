@@ -7,17 +7,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Rubik&display=swap" rel="stylesheet">
 <title>random password generator</title>
 </head>
 <body>
 <!-- onsubmit is used in form because if we dont use it .. it will reset it page to its original foam on clicking submit button .. that is output field will get empty that is result will flash and then just go away  -->
 <div class="container">
-    <form action="" name="myform" onsubmit="return false">
-        <input id="outputt" type="text" size="18" name="output">
+    <h1><strong>Random Password Generator</strong></h1>
+    <form class="formstyle" action="" name="myform" onsubmit="return false">
 
-        <button onclick="populateForm()">Generate Password</button><br>
+        <div class="con">
+            <input id="outputt" class="outpu" type="text" name="output"><br>
+        <button onclick="populateForm()" class="btn btn-success mybtn">Generate Password</button><br><br>
+        <div class="row">
+            <div class="col-lg-10 p-0 m-0" style="text-align:center; width: 80%;">
+                <strong style="font-size:34px; text-align: right;">Password Length:</strong>
+            </div>
+            <div class="col-lg-2 p-0 m-0" style="text-align: left; width: 20%; margin-top: 20px;">
+                <input type="text" id="lengthOfPassword" class="lengthOfPassword1" name="length" size="1" value="6">
+            </div>
+        </div>
 
-        <strong>Password Length:</strong><input type="text" size="8" id="lengthOfPassword" name="length" value="6">
+        </div>
+
+        
+        
 
     </form>
 <script src="script.js">
